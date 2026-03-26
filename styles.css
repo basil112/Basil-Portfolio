@@ -1173,131 +1173,569 @@ body {
     font-size: 0.95rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* ===================================
+   RESPONSIVE DESIGN - All Screen Sizes
+   =================================== */
+
+/* Extra Large Screens (1441px+) */
+@media (min-width: 1441px) {
+    .container {
+        max-width: 1340px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+/* Large Screens (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Medium Screens / Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 2rem;
+    }
+    
+    .nav-container {
+        padding: 1rem 1.5rem;
+    }
+    
     .nav-menu {
-        display: none;
+        gap: 1.5rem;
     }
-
-    .floating-socials {
-        display: none;
+    
+    .nav-menu a {
+        font-size: 0.85rem;
     }
-
+    
+    .hero {
+        padding: 7rem 2rem 3rem;
+    }
+    
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+        text-align: center;
     }
-
+    
+    .hero-text {
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+    }
+    
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
-
+    
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
-
+    
     .image-placeholder {
-        width: 250px;
-        height: 350px;
+        width: 280px;
+        height: 380px;
+        margin: 0 auto;
     }
-
-    .cta-buttons {
-        flex-direction: column;
-    }
-
-    .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
+    
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
     }
-
+    
+    .about-image {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
     .about-text h3 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
-
+    
     .expertise {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-
+    
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
-
+    
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-
+    
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-
+    
+    .project-card {
+        height: auto;
+    }
+    
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
-
-    .scroll-indicator {
+    
+    .cta-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: auto;
+        font-size: 0.9rem;
+        padding: 0.8rem 1.8rem;
+    }
+    
+    .floating-socials {
         display: none;
     }
 }
 
-@media (max-width: 480px) {
+/* Small Tablets / Large Phones (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .nav-container {
+        padding: 0.8rem 1rem;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .logo {
+        font-size: 1.6rem;
+    }
+    
+    .floating-socials {
+        display: none;
+    }
+    
     .hero {
-        padding: 6rem 1rem 1rem;
+        padding: 6.5rem 1.5rem 2.5rem;
     }
-
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.3rem;
     }
-
+    
     .hero-subtitle {
         font-size: 1.1rem;
     }
-
+    
     .hero-description {
         font-size: 0.95rem;
     }
-
+    
     .image-placeholder {
-        width: 220px;
-        height: 300px;
+        width: 260px;
+        height: 360px;
+        margin: 0 auto;
     }
-
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
     .section-title {
-        font-size: 1.8rem;
-        margin-bottom: 2.5rem;
+        font-size: 1.9rem;
+        margin-bottom: 2rem;
     }
-
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-image {
+        max-width: 100%;
+    }
+    
     .about-text h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
-
+    
     .about-text p {
-        font-size: 0.98rem;
+        font-size: 0.95rem;
     }
-
+    
+    .expertise {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .expertise-item h4 {
+        font-size: 1.05rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+    
     .skill-card {
         padding: 1.8rem 1.2rem;
     }
-
+    
     .skill-icon {
         font-size: 2.2rem;
         width: 65px;
         height: 65px;
     }
-
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
     .contact-card {
         padding: 1.8rem 1.2rem;
     }
-
+    
     .cv-download {
-        padding: 2.5rem 1.5rem;
+        padding: 2rem 1.5rem;
     }
+    
+    .scroll-indicator {
+        display: none;
+    }
+}
 
-    .footer-content {
+/* Small Phones (320px - 480px) */
+@media (max-width: 480px) {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .nav-container {
+        padding: 0.7rem 0.8rem;
+        flex-direction: row;
+    }
+    
+    .navbar {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .floating-socials {
+        display: none;
+    }
+    
+    .hero {
+        padding: 6rem 1rem 2rem;
+        text-align: center;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .image-placeholder {
+        width: 200px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .image-placeholder img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        font-size: 0.9rem;
+        border-radius: 0.5rem;
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+    
+    .btn i {
+        margin-right: 0.5rem;
+    }
+    
+    .section {
+        padding: 2.5rem 0;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .about-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .about-text {
+        text-align: left;
+    }
+    
+    .about-text h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    
+    .expertise {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .expertise-item {
+        padding: 1rem;
+    }
+    
+    .expertise-item h4 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .expertise-item p {
+        font-size: 0.85rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .skill-card {
+        padding: 1.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .skill-card h3 {
+        font-size: 1.1rem;
+        margin: 0.8rem 0 0.5rem;
+    }
+    
+    .skill-card p {
+        font-size: 0.85rem;
+    }
+    
+    .skill-icon {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .project-card {
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+    
+    .project-info {
+        padding: 1rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .project-info p {
+        font-size: 0.85rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-card {
+        padding: 1.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.1rem;
+        margin: 0.8rem 0;
+    }
+    
+    .contact-card p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-link {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        min-height: 44px;
+        line-height: 44px;
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cv-download {
+        padding: 2rem 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .cv-download h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cv-download p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.85rem;
+    }
+    
+    .footer-socials {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+    
+    .footer-socials a {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.8rem;
+        padding-top: 1rem;
+    }
+    
+    .scroll-indicator {
+        display: none;
     }
 }
