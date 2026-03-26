@@ -1,0 +1,24 @@
+{
+  "name": "basil-portfolio",
+  "version": "1.0.0",
+  "description": "Muhammad Basil's Professional Portfolio - WordPress Developer & Freelancer",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "wordpress",
+    "developer",
+    "freelancer",
+    "web-design"
+  ],
+  "author": "Muhammad Basil",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/basil112/Basil-Portfolio.git"
+  }
+}
