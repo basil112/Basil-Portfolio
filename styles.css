@@ -33,6 +33,7 @@ body {
     color: var(--text-light);
     overflow-x: hidden;
     letter-spacing: 0.3px;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Navigation Bar */
@@ -1428,6 +1429,7 @@ body {
     
     .container {
         padding: 0 1.5rem;
+        overflow-x: hidden;
     }
     
     .nav-container {
@@ -1444,11 +1446,13 @@ body {
     
     .hero {
         padding: 6.5rem 1.5rem 2.5rem;
+        overflow-x: hidden;
     }
     
     .hero-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        overflow-x: hidden;
     }
     
     .hero-title {
@@ -1481,8 +1485,9 @@ body {
         font-size: 0.95rem;
     }
     
-    .section {
+    section {
         padding: 3rem 0;
+        overflow-x: hidden;
     }
     
     .section-title {
@@ -1519,6 +1524,7 @@ body {
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.2rem;
+        overflow-x: hidden;
     }
     
     .skill-card {
@@ -1534,6 +1540,7 @@ body {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        overflow-x: hidden;
     }
     
     .contact-grid {
@@ -1563,15 +1570,25 @@ body {
     body {
         font-size: 16px;
         overflow-x: hidden;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    html {
+        width: 100%;
+        overflow-x: hidden;
     }
     
     .container {
         padding: 0 1rem;
+        width: 100%;
+        overflow-x: hidden;
     }
     
     .navbar {
         position: fixed;
         width: 100%;
+        overflow: visible;
     }
     
     .nav-container {
@@ -1592,19 +1609,34 @@ body {
         display: none;
     }
     
+    .mobile-menu {
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
     .floating-socials {
         display: none;
+    }
+    
+    section {
+        padding: 3rem 1rem;
+        overflow-x: hidden;
+        width: 100%;
     }
     
     .hero {
         padding: 70px 1rem 2rem;
         text-align: center;
+        overflow-x: hidden;
+        width: 100%;
     }
     
     .hero-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
+        overflow-x: hidden;
     }
     
     .hero-title {
@@ -1657,10 +1689,6 @@ body {
         margin-right: 0.5rem;
     }
     
-    section {
-        padding: 3rem 0;
-    }
-    
     .section-title {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
@@ -1670,6 +1698,7 @@ body {
     .about-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+        overflow-x: hidden;
     }
     
     .about-image {
@@ -1679,54 +1708,65 @@ body {
     
     .about-text {
         text-align: left;
+        overflow-x: hidden;
     }
     
     .about-text h3 {
         font-size: 1.3rem;
         margin-bottom: 1rem;
+        word-wrap: break-word;
     }
     
     .about-text p {
         font-size: 0.9rem;
         line-height: 1.6;
         margin-bottom: 1rem;
+        word-wrap: break-word;
     }
     
     .expertise {
         grid-template-columns: 1fr;
         gap: 1rem;
+        overflow-x: hidden;
     }
     
     .expertise-item {
         padding: 1rem;
+        overflow-x: hidden;
     }
     
     .expertise-item h4 {
         font-size: 1rem;
         margin-bottom: 0.5rem;
+        word-wrap: break-word;
     }
     
     .expertise-item p {
         font-size: 0.85rem;
+        word-wrap: break-word;
     }
     
     .skills-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        overflow-x: hidden;
     }
     
     .skill-card {
         padding: 1.5rem 1rem;
         border-radius: 0.5rem;
+        overflow-x: hidden;
     }
     
     .skill-card h3 {
         font-size: 1.1rem;
         margin: 0.8rem 0 0.5rem;
+        word-wrap: break-word;
     }
     
     .skill-card p {
         font-size: 0.85rem;
+        word-wrap: break-word;
     }
     
     .skill-icon {
@@ -1738,6 +1778,7 @@ body {
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        overflow-x: hidden;
     }
     
     .project-card {
@@ -1751,35 +1792,43 @@ body {
     
     .project-info {
         padding: 1rem;
+        overflow-x: hidden;
     }
     
     .project-info h3 {
         font-size: 1.1rem;
         margin-bottom: 0.5rem;
+        word-wrap: break-word;
     }
     
     .project-info p {
         font-size: 0.85rem;
+        word-wrap: break-word;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+        overflow-x: hidden;
     }
     
     .contact-card {
         padding: 1.5rem 1rem;
         border-radius: 0.5rem;
+        overflow-x: hidden;
     }
     
     .contact-card h3 {
         font-size: 1.1rem;
         margin: 0.8rem 0;
+        word-wrap: break-word;
     }
     
     .contact-card p {
         font-size: 0.9rem;
         margin-bottom: 0.8rem;
+        word-wrap: break-word;
+        word-break: break-word;
     }
     
     .contact-link {
@@ -1787,7 +1836,7 @@ body {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
         min-height: 44px;
-        line-height: 44px;
+        line-height: normal;
     }
     
     .contact-icon {
@@ -1799,35 +1848,42 @@ body {
     .cv-download {
         padding: 2rem 1rem;
         border-radius: 0.5rem;
+        overflow-x: hidden;
     }
     
     .cv-download h3 {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
+        word-wrap: break-word;
     }
     
     .cv-download p {
         font-size: 0.9rem;
         margin-bottom: 1rem;
+        word-wrap: break-word;
     }
     
     .footer {
         padding: 2rem 0 1rem;
+        overflow-x: hidden;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
         text-align: center;
+        padding: 0 1rem;
     }
     
     .footer-section h4 {
         font-size: 1rem;
         margin-bottom: 0.8rem;
+        word-wrap: break-word;
     }
     
     .footer-section p {
         font-size: 0.85rem;
+        word-wrap: break-word;
     }
     
     .footer-socials {
@@ -1844,6 +1900,9 @@ body {
     .footer-bottom {
         font-size: 0.8rem;
         padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        word-wrap: break-word;
     }
     
     .scroll-indicator {
