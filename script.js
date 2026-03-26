@@ -1,4 +1,38 @@
-// Smooth scroll behavior for navigation links
+// ========================================
+// MOBILE MENU FUNCTIONALITY
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuToggle && mobileMenu) {
+        // Toggle mobile menu
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close menu when link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navbar')) {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    }
+});
+
+// ========================================
+// SMOOTH SCROLL BEHAVIOR
+// ========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -12,7 +46,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animation on scroll
+// ========================================
+// LAZY LOADING FOR IMAGES
+// ========================================
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px'
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// ========================================
+// ANIMATION ON SCROLL WITH INTERSECTION OBSERVER
+// ========================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -35,7 +95,9 @@ document.querySelectorAll('.skill-card, .project-card, .contact-card').forEach(e
     observer.observe(el);
 });
 
-// Active nav link on scroll
+// ========================================
+// ACTIVE NAVIGATION LINK ON SCROLL
+// ========================================
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
@@ -56,7 +118,9 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Parallax effect for hero section
+// ========================================
+// PARALLAX EFFECT FOR HERO SECTION (Mobile-optimized)
+// ========================================
 window.addEventListener('scroll', () => {
     const scrollPosition = window.pageYOffset;
     const starsBg = document.querySelector('.stars-background');

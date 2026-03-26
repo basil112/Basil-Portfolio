@@ -113,6 +113,75 @@ body {
     width: 100%;
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(8, 9, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-color);
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.mobile-menu.active {
+    display: flex;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-menu a:hover {
+    color: var(--accent-blue);
+    border-left-color: var(--accent-blue);
+    background: rgba(0, 229, 255, 0.05);
+    padding-left: 2.3rem;
+}
+
 /* Floating Social Icons */
 .floating-socials {
     position: fixed;
@@ -1213,8 +1282,8 @@ body {
 
 /* Medium Screens / Tablets (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        padding: 0 2rem;
+    .mobile-menu-toggle {
+        display: none;
     }
     
     .nav-container {
@@ -1322,12 +1391,8 @@ body {
 
 /* Small Tablets / Large Phones (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
-    .container {
-        padding: 0 1.5rem;
-    }
-    
-    .nav-container {
-        padding: 0.8rem 1rem;
+    .mobile-menu-toggle {
+        display: flex;
     }
     
     .nav-menu {
@@ -1456,25 +1521,8 @@ body {
 
 /* Small Phones (320px - 480px) */
 @media (max-width: 480px) {
-    * {
-        -webkit-tap-highlight-color: transparent;
-    }
-    
-    body {
-        font-size: 16px;
-    }
-    
-    .container {
-        padding: 0 1rem;
-    }
-    
-    .nav-container {
-        padding: 0.7rem 0.8rem;
-        flex-direction: row;
-    }
-    
-    .navbar {
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    .mobile-menu-toggle {
+        display: flex;
     }
     
     .nav-menu {
