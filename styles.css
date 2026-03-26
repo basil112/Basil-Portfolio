@@ -33,7 +33,7 @@ body {
     color: var(--text-light);
     overflow-x: hidden;
     letter-spacing: 0.3px;
-    
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Navigation Bar */
@@ -216,7 +216,7 @@ body {
     right: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 1.5rem;
     z-index: 999;
