@@ -1,0 +1,20 @@
+{
+  "name": "Muhammad Basil Portfolio",
+  "version": 1,
+  "public": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
