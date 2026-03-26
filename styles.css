@@ -33,7 +33,7 @@ body {
     color: var(--text-light);
     overflow-x: hidden;
     letter-spacing: 0.3px;
-    -webkit-overflow-scrolling: touch;
+    
 }
 
 /* Navigation Bar */
